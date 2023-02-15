@@ -34,8 +34,23 @@ let languages2 = {
     thirLanguage: 'german',
     fourthLanguage: 'japanese',
 }
-
 let { firstLanguage, thirLanguage } = languages2;
 console.log(firstLanguage, thirLanguage);
 
 // Using rest parameter syntax
+let fruits = ['apple', 'orange', 'banana', 'peach', 'cherry'];
+let [favorite, secondFavorite, ...others] = fruits;
+console.log(favorite);
+console.log(secondFavorite);
+console.log(others); // an array of the remaining elements 
+
+let favoriteFoods = {
+    brian: 'pizza',
+    anna: 'pasta',
+    sarah: 'vegetarian',
+    andrea: 'steak'
+};
+let { brian, anna, ...rest } = favoriteFoods;
+console.log(brian);
+console.log(anna);
+console.log(rest); // an object containing the remaining items
